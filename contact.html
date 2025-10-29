@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="icon" href="SCicon.png" type="image/png">
+  <meta charset="utf-8">
+  <title>Contact — Shuting Chen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    nav {
+      border: 1px solid black;
+      display: flex;
+      justify-content: space-between;
+    }
+    header, section, fieldset, input, textarea, dialog, footer { border: 1px solid black; }
+  </style>
+</head>
+<body>
+  <nav aria-label="Main navigation">
+    <a href="index.html"><b>Shuting Chen</b> — <span>UCSD ECE Student</span></a>
+    <div>
+      <a href="experiments.html">Experiments</a> |
+      <a href="resume.html">Resume</a> |
+      <a href="projects.html">Projects</a> |
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <header>
+      <h1>Contact</h1>
+      <p>Please watch the short clip and leave your message below.</p>
+    </header>
+
+    <section aria-labelledby="intro-video">
+      <h2 id="intro-video">Intro Video</h2>
+      <video controls width="480" height="270">
+        <source src="111.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><small>(If the video cannot play, please contact me via the form below.)</small></p>
+    </section>
+
+    <section aria-labelledby="contact-form">
+      <h2 id="contact-form">Send a Message</h2>
+
+      <noscript>
+        <p><strong>Note:</strong> JavaScript is disabled — the confirmation dialog will not appear after submitting.</p>
+      </noscript>
+
+      <form id="contactForm" action="#" method="post">
+        <fieldset>
+          <legend>Your Details</legend>
+
+          <p>
+            <label for="name">Name</label><br>
+            <input id="name" name="name" type="text" required placeholder="Your name" autocomplete="name">
+          </p>
+
+          <p>
+            <label for="email">Email</label><br>
+            <input id="email" name="email" type="email" required placeholder="you@example.com" autocomplete="email">
+          </p>
+
+          <p>
+            <label for="phone">Phone</label><br>
+            <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="+1 (___) ___-____" autocomplete="tel">
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your Message</legend>
+          <p>
+            <label for="msg">Message</label><br>
+            <textarea id="msg" name="msg" rows="6" cols="40" placeholder="Write your message here..." required></textarea>
+          </p>
+        </fieldset>
+
+        <p><em>Please make sure your info is correct before submitting the form.</em></p>
+
+        <p><button type="submit">Send</button></p>
+      </form>
+
+      <dialog id="thanksDialog" aria-label="Submission confirmation">
+        <p>I will reply ASAP 😊</p>
+        <button id="closeDialog" type="button">OK</button>
+      </dialog>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      📧 <a href="mailto:shc070@ucsd.edu">shc070@ucsd.edu</a> |
+      📞 <a href="tel:+18058860380">+1 (805) 886-0380</a> |
+      <a href="https://www.instagram.com/cc_cst_/?next=%2F" target="_blank" rel="noopener noreferrer">
+        <img src="ins.png" alt="Instagram icon" width="14" height="14"> Instagram
+      </a>
+    </p>
+    <p><small>&copy; 2025 Shuting Chen</small></p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const dialog = document.getElementById('thanksDialog');
+    const closeBtn = document.getElementById('closeDialog');
+
+    form.addEventListener('submit', function (event) {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        form.reportValidity();
+        return;
+      }
+      event.preventDefault();
+      dialog.showModal();
+    });
+
+    closeBtn.addEventListener('click', () => dialog.close());
+  </script>
+</body>
+</html>
+

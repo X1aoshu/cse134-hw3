@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="icon" href="SCicon.png" type="image/png">
+  <meta charset="utf-8">
+  <title>Shuting Chen's Home Page</title>
+  <style>
+    /* Only 2 global properties: display + justify-content */
+    nav {
+      border: 1px solid black;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* semantic-box styling (not counted toward CSS limit) */
+    semantic-box {
+      display: block;
+      border: 1px dashed black;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+    semantic-box > h3 {
+      margin: 0 0 .5rem 0;
+    }
+  </style>
+  <script src="js/hello-console.js" defer></script>
+</head>
+<body>
+  <nav aria-label="Main navigation">
+    <a href="index.html"><b>Shuting Chen</b> — <span>UCSD ECE Student</span></a>
+    <div>
+      <a href="experiments.html">Experiments</a> |
+      <a href="resume.html">Resume</a> |
+      <a href="projects.html">Projects</a> |
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <h1>Welcome!</h1>
+    <p>This is the home page of Shuting Chen's semantic HTML portfolio.</p>
+
+    <noscript>
+      <p><strong>Note:</strong> JavaScript is disabled — interactive features like the contact dialog will not work.</p>
+    </noscript>
+
+    <section aria-labelledby="intro">
+      <h2 id="intro">About Me</h2>
+      <picture>
+        <source media="(min-width:800px)" srcset="pic.jpg">
+        <source media="(min-width:400px)" srcset="pic.jpg">
+        <img src="pic.jpg" alt="Shuting's portrait" width="200">
+      </picture>
+
+      <p>
+        Hello!<br> I'm <strong>Shuting Chen</strong>, an <i>Electrical and Computer Engineering</i> student at UC San Diego.
+        I'm passionate about embedded systems, circuit design, and user-centered technology that bridges hardware and software.
+        This website showcases my projects, experience, and journey as an ECE student.
+      </p>
+
+      <!-- Chip Illustration -->
+      <figure>
+        <svg viewBox="0 0 220 120" width="220" height="120" role="img" aria-label="Chip icon">
+          <rect x="40" y="20" width="140" height="80" rx="6" ry="6" fill="#fff" stroke="#000" stroke-width="2" />
+          <g stroke="#000" stroke-width="2">
+            <line x1="40" y1="30" x2="20" y2="30" />
+            <line x1="40" y1="45" x2="20" y2="45" />
+            <line x1="40" y1="60" x2="20" y2="60" />
+            <line x1="40" y1="75" x2="20" y2="75" />
+            <line x1="40" y1="90" x2="20" y2="90" />
+            <line x1="180" y1="30" x2="200" y2="30" />
+            <line x1="180" y1="45" x2="200" y2="45" />
+            <line x1="180" y1="60" x2="200" y2="60" />
+            <line x1="180" y1="75" x2="200" y2="75" />
+            <line x1="180" y1="90" x2="200" y2="90" />
+          </g>
+          <circle cx="60" cy="40" r="4" fill="#000" />
+          <text x="110" y="70" text-anchor="middle" font-family="sans-serif" font-size="16">CHIP</text>
+        </svg>
+        <figcaption>Chip icon representing hardware design</figcaption>
+      </figure>
+
+      <label>
+        Graduation Progress: <progress value="90" max="100">90%</progress>
+      </label>
+    </section>
+
+    <!-- Custom Elements Section -->
+    <section aria-labelledby="custom-elements">
+      <h2 id="custom-elements">Custom Elements</h2>
+
+      <semantic-box>
+        <h3>Semantic Box</h3>
+        <ul>
+          <li>label1</li>
+          <li>label2</li>
+          <li>label3</li>
+        </ul>
+      </semantic-box>
+
+      <p>Open your browser console to see the message from the element below:</p>
+      <hello-console></hello-console>
+    </section>
+
+    <h2>Here is my GitHub Profile:</h2>
+    <iframe 
+      src="https://github.com/X1aoshu" 
+      width="960" height="900" 
+      title="GitHub Profile Preview">
+    </iframe>
+
+    <section aria-labelledby="einstein">
+      <h2 id="einstein">MathML E=mc^2</h2>
+
+      <p>Inline formula:
+        <math aria-label="E equals m c squared">
+          <mi>E</mi>
+          <mo>=</mo>
+          <mi>m</mi>
+          <mo>&#x2062;</mo> 
+          <msup>
+            <mi>c</mi>
+            <mn>2</mn>
+          </msup>
+        </math>
+      </p>
+
+      <p>Block display:</p>
+        <math display="block" aria-label="E equals m c squared">
+          <mrow>
+            <mi>E</mi>
+            <mo>=</mo>
+            <mi>m</mi>
+            <mo>&#x2062;</mo> 
+            <msup>
+              <mi>c</mi>
+              <mn>2</mn>
+            </msup>
+          </mrow>
+        </math>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      📧 <a href="mailto:shc070@ucsd.edu">shc070@ucsd.edu</a> |
+      📞 <a href="tel:+18058860380">+1 (805) 886-0380</a> |
+      <a href="https://www.instagram.com/cc_cst_/?next=%2F" target="_blank">
+        <img src="ins.png" alt="Instagram icon" width="16" height="16"> Instagram
+      </a>
+    </p>
+    <p><small>&copy; 2025 Shuting Chen</small></p>
+  </footer>
+</body>
+</html>
+
+
+
+
