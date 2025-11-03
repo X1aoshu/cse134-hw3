@@ -28,18 +28,18 @@ main {
 }
 
 .top {
-  padding: clamp(1rem, 4vw, 2rem) 0;
+  padding: clamp(1rem, 4dvw, 2rem) 0;
 
   .top-grid {
     display: grid;
     grid-template-columns: 1.3fr 1fr;   
     align-items: center;
-    gap: clamp(1rem, 4vw, 3rem);
+    gap: clamp(1rem, 4dvw, 3rem);
     text-align: left;
   }
 
   .top-media img {
-    width: clamp(380px, 46vw, 700px);
+    width: clamp(380px, 46dvw, 700px);
     height: auto;
     object-fit: cover;
     display: block;
@@ -48,7 +48,7 @@ main {
   }
 
   .top-title {
-    font-size: clamp(56px, 8vw, 100px);
+    font-size: clamp(56px, 8dvw, 100px);
     font-weight: 800;
     line-height: 1;
     margin-bottom: .5rem;
@@ -59,18 +59,30 @@ main {
     font-weight: 700;
   }
 
-  .top-text { align-self: start; margin-top: 1rem; }
+  .top-text { 
+    align-self: start; margin-top: 1rem; 
+    > p {
+        ruby-align: space-around;
+    }
+
+    > p rt {
+        font-size: 0.75em; 
+        color: #555;       
+        line-height: 1.2;  
+    }
+
+  }
 
   .top-ctas {
     display: flex;
-    gap: clamp(.6rem, 2vw, 1.2rem);
+    gap: clamp(.6rem, 2dvw, 1.2rem);
     margin-top: .6rem;
     background: transparent;
     justify-content: flex-start;
     flex-wrap: nowrap;              
 
     .circle-btn {
-      --size: clamp(96px, 12vw, 140px);
+      --size: clamp(96px, 12dvw, 140px);
       width: var(--size);
       height: var(--size);
       border-radius: 50%;
@@ -172,8 +184,8 @@ main {
       gap: 1.2rem;
     }
 
-    .top-media img { width: min(90vw, 560px); }
-    .top-title { font-size: clamp(40px, 10vw, 64px); margin-bottom: .4rem; }
+    .top-media img { width: min(90dvw, 560px); }
+    .top-title { font-size: clamp(40px, 10dvw, 64px); margin-bottom: .4rem; }
     .top-text { margin-top: .5rem; }
 
     .top-ctas {
@@ -181,7 +193,7 @@ main {
       flex-wrap: wrap;                       
       gap: .8rem;
 
-      .circle-btn { --size: clamp(88px, 26vw, 120px); }
+      .circle-btn { --size: clamp(88px, 26dvw, 120px); }
     }
   }
 
@@ -191,9 +203,9 @@ main {
 
 @media (min-width: 600px) and (max-width: 1024px) {
   .top {
-    .top-grid { gap: clamp(1rem, 3vw, 2rem); }
-    .top-title { font-size: clamp(48px, 8vw, 88px); }
-    .top-ctas .circle-btn { --size: clamp(96px, 18vw, 130px); }
+    .top-grid { gap: clamp(1rem, 3dvw, 2rem); }
+    .top-title { font-size: clamp(48px, 8dvw, 88px); }
+    .top-ctas .circle-btn { --size: clamp(96px, 18dvw, 130px); }
   }
   .icons { gap: 4rem; }
 }
