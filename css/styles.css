@@ -1,3 +1,6 @@
+
+
+
 :root {
   --brand-bg: #a19f9f;
   --accent-red: #f2442e;
@@ -45,6 +48,9 @@ main {
     display: block;
     border-radius: var(--radius-smooth, 12px);
     box-shadow: var(--shadow-soft, 0 4px 10px rgba(0,0,0,0.1));
+    object-fit: cover;
+    object-position: center top;
+    aspect-ratio: 1 / 1;
   }
 
   .top-title {
