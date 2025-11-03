@@ -333,3 +333,15 @@ section[aria-labelledby="contact-form"] #thanksDialog::backdrop{
     transition:none !important; animation:none !important;
   }
 }
+
+@keyframes press {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+.btn-send:active {
+  animation: press 0.2s ease;
+}
+
+

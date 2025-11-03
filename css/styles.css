@@ -105,6 +105,16 @@ main {
   figure { text-align: center; }
 }
 
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.icons svg {
+  opacity: 0;
+  animation: fade-in-up 0.8s ease forwards;
+}
+
 .github-header {
   display: flex;
   align-items: center;
@@ -136,6 +146,16 @@ main {
     }
   }
 }
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(5deg); }
+}
+
+.github-btn:hover svg {
+  animation: wave 0.5s ease-in-out;
+}
+
 
 @media (max-width: 1024px) {
   main {
@@ -181,7 +201,7 @@ main {
 @media (min-width: 1025px) {
   main {
     max-width: 1400px;     
-    width: 92vw;
+    width: 92dvw;
     padding: 0 2rem;
   }
 
@@ -190,7 +210,7 @@ main {
       grid-template-columns: 1.3fr 1fr;     
       align-items: center;
       justify-items: stretch;
-      gap: clamp(1.5rem, 4vw, 3rem);
+      gap: clamp(1.5rem, 4dvw, 3rem);
     }
 
     .top-ctas {

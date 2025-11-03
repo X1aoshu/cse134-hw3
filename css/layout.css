@@ -154,3 +154,12 @@ main {
     text-align: center;
   }
 }
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+.site-footer img:hover {
+  animation: pulse 0.6s ease-in-out;
+}
