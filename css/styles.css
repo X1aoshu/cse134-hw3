@@ -166,7 +166,7 @@ main {
   }
 
   .icons { gap: 2rem; }
-  iframe { width: 100%; min-height: 80vh; border: 0; }
+  iframe { width: 100%; min-height: 80dvh; border: 0; }
 }
 
 @media (min-width: 600px) and (max-width: 1024px) {
