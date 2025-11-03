@@ -125,6 +125,19 @@ img, svg { max-width: 100%; height: auto; display: block; }
   }
 }
 
+html, body {
+  height: 100%;              
+}
+
+body {
+  display: flex;
+  flex-direction: column;    
+  min-height: 100vh;         
+}
+
+main {
+  flex: 1;              
+}
 
 
 @media (max-width: 1024px) {
